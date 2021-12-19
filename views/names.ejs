@@ -1,0 +1,107 @@
+  <!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CredDebt</title>
+    <link rel="stylesheet" href="/css/name.css">
+    <!-- <link rel="stylesheet" href="/css/new.css">  -->
+
+    <link rel="stylesheet" href="/css/style3.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+  </head>
+  <body>
+    
+    <nav class="navbar sticky-top shadow p-2 mb-2">
+      <a class="navbar-brand" href="/user/<%=id%>/exist"><i class="fas fa-arrow-circle-left"></i></a>
+      <ul class="nav navbar-nav navbar-center">   
+
+      
+      </ul>
+      <ul class="nabar">
+      
+        
+          <li class="navi">
+             <i class="fas fa-user-circle"></i>
+              <ul style="list-style-type:none;">
+                <li>
+                  <a href="/user/<%=id%>/new">Add new Contact</a>
+                </div>
+                <li>
+                  <a href="/user/<%=id%>/exist">Show Existing Contact</a>
+                </li>
+                <li>
+                  <a href="/users/logout">Logout</a>
+                </li>
+              </ul>
+            </li>
+            
+      </ul>
+    </nav>
+    
+    <div class="container">
+      <div class="tugesh">
+      <div class="info">
+        <h4>Name: <%=thiscontact.name %></h4>
+        <h4>Phone Number: <%=thiscontact.phoneNo %></h4>
+        <h4>Email Id: <%=thiscontact.email %></h4>
+        <h4>Address: <%=thiscontact.address %></h4>
+        <h4>Total: <%=thiscontact.total%></h4>
+        <form method="post">
+          <button class="btn1" type="submit" formaction="/user/<%=id%>/<%=p_id%>/sendEmail" value="SendEmail">Send Email</button>
+        </form>
+      </div>
+      <div class="newTransact">
+        <form class="fillAmt" method="post">
+          <input type="date" name="date" placeholder="Enter date" autocomplete="off" value="" maxlength="8">
+          <input type="number" name="amount" placeholder="Enter amount" required autocomplete="off">
+          <input type="text" name="desc" placeholder="Enter description" autocomplete="off" value="" maxlength="50">
+          <button type="submit" value="add" formaction="/user/<%=id%>/<%=p_id%>/add">Add</button>
+        </form>
+        <form method="post">
+          <button type="submit" value="reset" class="reset" formaction="/user/<%=id%>/<%=p_id%>/reset">Reset</button>    
+        </form>
+      </div>
+    </div>
+    <br>
+      <div class="mainTransact">
+        <div class="tagesh">
+        <div class="date Tag ">
+          <h4>Date of Transaction</h4>
+        </div>
+        <div class="amount Tag ">
+          <h4>Amount</h4>
+        </div>
+        <div class="desc Tag ">
+          <h4>Description</h4>
+        </div>
+      </div>
+        <!-- <br> -->
+
+        <% for(let frnd of expandedInfo){ %>
+          <div class="tagesh">
+        <div class="date Tag th">
+          <h4><%=frnd.date%></h4>
+        </div>
+        <div class="amount Tag th">
+          <h4><%=frnd.amount%></h4>
+        </div>
+        <div class="desc Tag th">
+          <h4><%=frnd.description %></h4>
+        </div>
+        <br>
+      </div>
+        <% } %>
+
+        
+      </div>
+
+
+    </div>
+  </body>
+</html>

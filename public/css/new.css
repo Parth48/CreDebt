@@ -1,0 +1,126 @@
+body{
+  font-family: Brush Script MT,cursive;
+  background-color: #ecfbfc;
+
+}
+h1{
+  background-color: #ecfbfc;
+  text-align: center;
+  font-family: Brush Script MT,cursive;
+  color: brown;
+}
+
+input{
+  margin:5px;
+  border-radius: 3px;
+  border: 0px;
+  display:flex;
+}
+
+::placeholder{
+  color:#99a8b2;
+}
+button{
+  width: 100%;
+  font-family: Brush Script MT,cursive;
+  border: 1px solid #e8e8e8;
+  border-radius: 5px;
+  color:#bbbbbb
+}
+
+button:hover {
+  background-color: #30475e;
+  color:white;
+}
+
+input[type="checkbox"] {
+  display: inline-block;
+}
+p{
+  margin:5px;
+}
+img{
+  width:50px;
+  height:50px;
+  margin: auto;
+
+}
+header{
+  background-color: #9ddfd3;
+  width:100%;
+}
+
+header{
+  text-align: right;
+}
+
+/* a{
+  text-decoration: none;
+  margin:20px;
+  height:25px;
+  font-size: 1.5em;
+  color: brown;
+
+}
+a:hover{
+  color:#30475e;
+} */
+img{
+  display: block;
+  height:300px;
+  width:300px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:50px;
+  margin-bottom: 50px;
+}
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: red;
+  text-align: center;
+}
+.ccontainer{
+  text-align: center;
+}
+
+input{
+  margin: auto;
+  margin-top:15px;
+  width:400px;
+  background: #fcf8ec;
+  color: #153e90;
+  height:25px;
+
+}
+.first{
+  margin-top: 20px;
+}
+textarea{
+  margin-top: 15px;
+  border: 0px;
+  width:400px;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  background: #fcf8ec;
+  color: #153e90;
+
+}
+.newContactForm{
+  background-color:#a3d2ca;
+  width:500px;
+  margin: auto;
+  margin-top: 100px;
+  border-radius: 10px;
+}
+.new{
+  color: #153e90;
+
+}
+.newBtn{
+  width:100px;
+  margin-bottom: 20px;
+}
+/* //for new.ejs */

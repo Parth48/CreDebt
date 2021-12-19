@@ -1,0 +1,149 @@
+body{
+  font-family: Brush Script MT,cursive;
+  background-color: #ecfbfc;
+
+}
+h1{
+  background-color: #ecfbfc;
+  text-align: center;
+  font-family: Brush Script MT,cursive;
+  color: brown;
+}
+
+input{
+  margin:5px;
+  border-radius: 3px;
+  border: 0px;
+  display:flex;
+}
+
+::placeholder{
+  color:#99a8b2;
+}
+
+button{
+  width: 100%;
+  font-family: Brush Script MT,cursive;
+  border: 1px solid #e8e8e8;
+  border-radius: 5px;
+  color:#bbbbbb
+}
+
+button:hover {
+  background-color: #30475e;
+  color:white;
+}
+
+input[type="checkbox"] {
+  display: inline-block;
+}
+p{
+  margin:5px;
+  text-align: center;
+}
+img{
+  width:50px;
+  height:50px;
+  margin: auto;
+
+}
+header{
+  background-color: #9ddfd3;
+  width:100%;
+}
+
+header{
+  text-align: right;
+}
+
+a{
+  text-decoration: none;
+  margin:20px;
+  height:25px;
+  font-size: 1.5em;
+  color: brown;
+
+}
+a:hover{
+  color:#30475e;
+}
+/* a:link {
+  background-color: #a3ddcb;
+} */
+.flex{
+  display: inline-block;
+  width:24%;
+  height:500px;
+}
+.desc{
+  margin-top: 30px;
+}
+img{
+  display: block;
+  height:300px;
+  width:300px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:50px;
+  margin-bottom: 50px;
+}
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: red;
+  text-align: center;
+}
+.Tag{
+  display: inline-block;
+  min-width:31%;
+  text-align: center;
+  vertical-align: middle;
+  color:#f39233;
+  background-color: #dddddd;
+  border-bottom: 2px solid #e0ece4;
+  border-right:2px solid #e0ece4;
+  flex:1;
+  justify-content: center;
+}
+
+
+.tagesh{
+  display: flex;
+}
+.title{
+  color: #2d6187;
+  background: #cee397;
+  flex:1;
+}
+.change{
+  color: #2d6187;
+  background: #cee397;
+  width:5%;
+  display: inline-block;
+  text-align: center;
+  justify-content: center;
+  flex:1;
+}
+
+.change2{
+  border-bottom: 2px solid #e0ece4;
+  border-right:2px solid #e0ece4;
+  color: #f39233;
+  background: #dddddd;
+  min-width:5%;
+  display: inline-block;
+  text-align: center;
+  align-items: center;
+  vertical-align: middle;
+  flex:1
+}
+.btn1{
+  width: 75%;
+  border-bottom: 2.5px solid #dddddd;
+  border-top: 5px solid #dddddd;
+
+}
+
+/* //for list-app */

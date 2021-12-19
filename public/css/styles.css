@@ -1,0 +1,84 @@
+.container{
+  display: inline-block;
+  width:49.1%;
+}
+.newUser{
+  margin: auto;
+}
+.newAmt{
+  margin: auto;
+}
+form{
+  text-align: center;
+}
+input{
+  margin:20px;
+  border-radius: 3px;
+  border:0.5px solid #cdd0cb;
+  background-color: #cdd0cb;
+  width:150px;
+  height:20px;
+}
+.two{
+  background-color: #ffc764;
+  border-radius: 3px;
+  vertical-align: top;
+}
+button{
+  background-color: red;
+  color:#f8f1f1;
+  border-radius: 3px;
+  border:0.5px solid red;
+  height:20px;
+}
+button:hover{
+  color: #f8f1f1;
+  background-color: green;
+  border-radius: 3px;
+  border:0.5px solid green;
+  height:20px;
+}
+.header
+{
+  color: yellow;
+  text-align: center;
+}
+.one{
+  background-color: #cdfffc;
+  border-radius: 3px;
+  text-align: center;
+
+}
+body{
+  background-color: black;
+  font-family: Brush Script MT,cursive;
+}
+.all{
+  margin-left:20px;
+}
+.frndName{
+  text-align: center;
+  color: #19456b
+}
+.amtHere{
+  width:49.1%;
+  display: inline-block;
+  text-align: center;
+
+}
+.descHere{
+  width:49.1%;
+  display: inline-block;
+  text-align: center;
+}
+h1{
+  font-weight: bolder;
+}
+footer {
+  position:fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: red;
+  text-align: center;
+}

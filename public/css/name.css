@@ -1,0 +1,182 @@
+body{
+  font-family: Brush Script MT,cursive;
+  background-color: #ecfbfc;
+
+}
+h1{
+  background-color: #ecfbfc;
+  text-align: center;
+  font-family: Brush Script MT,cursive;
+  color: brown;
+}
+
+input{
+  margin:5px;
+  border-radius: 3px;
+  display:flex;
+  border: none;
+  border-bottom: 2px solid #fff;
+  height: 40px;
+  background: transparent;
+  outline: #fff;
+  width: 350px;
+
+}
+
+::placeholder{
+  color:#99a8b2;
+}
+
+button{
+  width: 10%;
+  font-family: Brush Script MT,cursive;
+  /* border: 1px solid #e8e8e8; */
+  border-radius: 5px;
+  color:#bbbbbb;
+  display:inline-block;
+  margin-bottom: 15px;
+
+}
+
+
+button:hover {
+  background-color: #30475e;
+  color:white;
+}
+
+input[type="checkbox"] {
+  display: inline-block;
+}
+p{
+  margin:5px;
+}
+img{
+  width:50px;
+  height:50px;
+  margin: auto;
+
+}
+header{
+  background-color: #9ddfd3;
+  width:100%;
+}
+
+header{
+  text-align: right;
+}
+
+a{
+  text-decoration: none;
+  margin:20px;
+  height:25px;
+  font-size: 1.5em;
+  color: brown;
+
+}
+a:hover{
+  color:#30475e;
+}
+
+img{
+  display: block;
+  height:300px;
+  width:300px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:50px;
+  margin-bottom: 50px;
+}
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: red;
+  text-align: center;
+}
+
+.Tag{
+  display: inline-block;
+  min-width:25%;
+  color:#2d6187;
+  text-align: center;
+  /* margin: auto; */
+  background-color: #cee397;
+  border-right:2px solid #e0ece4;
+
+  flex:1;
+}
+.th{
+  /* display: inline-block; */
+  /* min-width:25%; */
+  color:#f39233;
+  /* text-align: center; */
+  /* margin: auto; */
+  background-color: #dddddd;
+  border-bottom: 2px solid #e0ece4;
+  border-right:2px solid #e0ece4;
+  /* flex:1; */
+
+}
+.mainTransact{
+  /* width: 75%; */
+  margin: auto;
+  text-align: center;
+
+}
+
+button:hover {
+  background-color: #30475e;
+  color:white;
+}
+.fillNewAmt{
+  text-align: center;
+}
+input{
+  margin:5px;
+  border-radius: 3px;
+  display:flex;
+  margin: auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  outline: #30475e;
+}
+::placeholder{
+  text-align: center;
+}
+.reset{
+  margin-top: 15px;
+}
+h4{
+  margin-left: 10px;
+  /* height:22.40px; */
+}
+.tagesh{
+  display:flex;
+  height: 100%;
+}
+.newTransact{
+  width:49.65%;
+  display: inline-block;
+  background-color: #9ec2e6;
+  flex:1;
+  border-bottom: 5px solid #2d6187;;
+
+
+}
+.info{
+  color:#2d6187;
+  width:50%;
+  display: inline-block;
+  background-color: #facfd2;
+  flex:1;
+  border-bottom: 5px solid #b32d2e;
+
+}
+form{
+  text-align: center;
+  width: 100%;
+}
+.tugesh{
+  display: flex;;
+}

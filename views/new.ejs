@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CreDebt</title>
+    <!-- <link rel="stylesheet" href="/css/stylesHome.css"> -->
+    <link rel="stylesheet" href="/css/new.css"> 
+    <!-- <link rel="stylesheet" href="/css/name.css"> -->
+
+    <link rel="stylesheet" href="/css/style3.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  </head>
+  <body>
+    <nav class="navbar sticky-top shadow p-2 mb-2">
+      <a class="navbar-brand" href="/user/<%=id%>/home"><i class="fas fa-arrow-circle-left"></i></a>
+      <ul class="nav navbar-nav navbar-center">
+
+
+        
+
+      
+      </ul>
+      <ul class="nabar">
+      
+        
+          <li class="navi">
+             <i class="fas fa-user-circle"></i>
+              <ul style="list-style-type:none;">
+                <li>
+                  <a href="/user/<%=id%>/new">Add new Contact</a>
+                </div>
+                <li>
+                  <a href="/user/<%=id%>/exist">Show Existing Contact</a>
+                </li>
+                <li>
+                  <a href="/users/logout">Logout</a>
+                </li>
+              </ul>
+            </li>
+            
+      </ul>
+    </nav>    
+    <div class="ccontainer">
+    <h1 class="newHeader">Add New Contact Details below</h1>
+    <div class="newContactForm">
+      <form class="new User" action="/user/<%=id%>/newContact" method="post">
+        <label for="Name" class="first">Name</label>
+        <input type="text" name="Name" autocomplete="off" required><br>
+        <label for="phoneNumber">Phone Number</label>
+        <input type="tel" name="phoneNumber" autocomplete="off" pattern="[0-9]{10}" maxlength="10"><br>
+        <label for="emailId">Email Id</label>
+        <input type="email" name="emailId"autocomplete="off" required><br>
+        <label for="address">Address</label><br>
+        <textarea name="address" rows="8" cols="80" autocomplete="off"></textarea><br>
+        <button type="submit" name="newContact" class="newBtn">Add Contact</button>
+      </form>
+    </div>
+    </div>
+
+
+  </body>
+</html>
+<!-- for creating new contacts -->

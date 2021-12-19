@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CreDebt</title>
+    <link rel="stylesheet" href="/css/stylesHome.css">
+
+    <link rel="stylesheet" href="/css/style3.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  </head>
+  <body>
+    <nav class="navbar sticky-top shadow p-2 mb-2">
+      <a class="navbar-brand" href="/user/<%=id%>/home"><i class="fas fa-arrow-circle-left"></i></a>
+      <ul class="nabar">    
+          <li class="navi" style="list-style-type: none;">
+             <i class="fas fa-user-circle"></i>
+              <ul style="list-style-type:none;">
+                <li>
+                  <a href="/user/<%=id%>/new">Add new Contact</a>
+                </div>
+                <li>
+                  <a href="/user/<%=id%>/exist">Show Existing Contact</a>
+                </li>
+                <li>
+                  <a href="/users/logout">Logout</a>
+                </li>
+              </ul>
+            </li>
+            
+      </ul>
+    </nav>
+    
+    <br>
+    <div class="container">
+      
+      <div class="tagesh">
+      <div class="name Tag title">
+        <h3>Contact Name</h3>
+      </div>
+      <div class="phoneNumber Tag title">
+        <h3>Contact Phone Number</h3>
+      </div>
+      <div class="email Tag title">
+        <h3>Contact EmailId</h3>
+      </div>
+      <div class="change">
+        <h3>Operation</h3>
+      </div>
+    </div>
+      <!-- <br> -->
+      
+      <% for(let frnd of data){ %>
+        <div class="tagesh">
+      <div class="name Tag gat">
+        <h4><%=frnd.name%></h4>
+      </div>
+      <div class="phoneNumber Tag gat ">
+        <h4><%=frnd.phoneNo%></h4>
+      </div>
+      <div class="email Tag gat ">
+        <h4><%=frnd.email %></h4>
+      </div>
+      <div class="change2">
+        <form method="get">
+        <button class="btn1" type="submit" formaction="/user/<%=id%>/<%=frnd._id%>" value="Edit">Expand</button>
+        <button class="btn1"  type="submit" formaction="/user/<%=id%>/<%=frnd._id%>/delete" value="Delete">Delete</button>
+      </form>
+      </div>
+      <br>
+    </div>
+      <% } %>
+   
+
+    </div>
+
+
+
+  </body>
+  </html>
+<!-- //org list.ejs connected to list.ejs for existing contacts -->
