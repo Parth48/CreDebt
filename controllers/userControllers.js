@@ -19,75 +19,11 @@ const moment= require('moment-timezone');
 var Feedback=require('../models/Feedback');
 
 
-// // Get form for update user
-// router.get('/:id/update-user',(req,res)=>{
-//     const id=req.params.id;
-//     Userdb.findById(id)
-//         .then(userdata=>{
-//             if(!userdata)
-//             {
-//                 res.status(404).send({message:`not found user ${id}`})
-//             }
-//             else{
-//                 res.render("update_user",{user:userdata})
-//             }
-//         })
-//         .catch(err=>{
-//             res.send(err);
-//         })
-// })
 
-// Post for update user
-// router.post('/:id/update-user',(req,res)=>{
-//     if(!req.body)
-//     {
-//         res.status(400).send({message:"Data to update cant be empty!"});
-//         return;
-           
-//     }
-//     const newUserEmail=req.body.email;
-//     Userdb.exists({email:newUserEmail},function(err,result){
-//         if(result)
-//         {
-//             const id =req.params.id;
-//             req.flash('error_msg','Email is already in use');
-//             res.redirect(`/user/${id}`);
-//         }
-//         else
-//         {
-//             const newUser=req.body;
-//             bcrypt.genSalt(10, (err, salt) => {
-//             bcrypt.hash(newUser.password, salt, (err, hash) => {
-//             if (err) throw err;
-
-//             // Set Password to Hash
-//             newUser.password = hash;
-//             const id =req.params.id;
-//             Userdb.findByIdAndUpdate(id,newUser,{useFindAndModify:false})
-//             .then(data=>{
-//             if(!data)
-//             {
-//                 res.status(404).send({message:`cannot update user ${id}`})
-//             }else{
-//                 req.flash('success_msg','Details Updated Successfully');
-//                 res.redirect(`/user/${id}`)
-//             }
-//         })
-//         .catch(err=>{
-//             res.status(500).send({message:"Error Update user information"})
-//         })
-//         });
-//     });
-//         }
-//     });    
-// });
-   
 
 // Get user index page //dashboard
 router.get("/:id/home", async(req, res) => {
 	const id=req.params.id;
-    // const userContacts=await Usercontacts.find({"user":id});
-    // const user=await User.findById(id);
     res.render("homeee_main",{id});
 });
 
@@ -127,7 +63,6 @@ router.post('/:id/newContact',async(req,res)=>{
     newUserContact.save();
     req.flash('success_msg','Contact Added successfully');
     res.redirect(`/user/${id}/exist`);
-    // res.render('new',{id});
 });
 
 ////expand a certain contact
@@ -152,7 +87,6 @@ router.post('/:id/:p_id/sendEmail',async(req,res)=>{
 	const id=req.params.id;
     const currAcc=await User.findById(id);
     const p_id=req.params.p_id;
-    // const expandedInfo= await expandContact.find({contact: req.params.p_id});
     const amtt=Math.abs(thiscontact.total);
     let email_content;
     if(thiscontact.total>=0)
@@ -220,7 +154,6 @@ router.post('/:id/:p_id/add',async(req,res)=>{
         console.log(err);
         
     });
-    // const expandedInfo= await expandContact.find({contact: req.params.p_id});
     req.flash('success_msg','Transaction added successfully');
 
     res.redirect(`/user/${req.params.id}/${req.params.p_id}`);
@@ -244,7 +177,6 @@ router.post('/:id/:p_id/reset',async(req,res)=>{
     });
     req.flash('success_msg','Data Reset successfull');
 
-    // const expandedInfo= await expandContact.find({contact: req.params.p_id});
     res.redirect(`/user/${req.params.id}/${req.params.p_id}`);
 
 });
